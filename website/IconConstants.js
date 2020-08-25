@@ -1,4 +1,4 @@
-import _ from "lodash";
+import reduce from "lodash.reduce";
 
 export const IconFamilies = {
   AntDesign: require("@expo/vector-icons/build/vendor/react-native-vector-icons/glyphmaps/AntDesign.json"),
@@ -17,7 +17,7 @@ export const IconFamilies = {
   Fontisto: require("@expo/vector-icons/build/vendor/react-native-vector-icons/glyphmaps/Fontisto.json"),
 };
 
-export const IconsArray = _.reduce(
+export const IconsArray = reduce(
   Object.keys(IconFamilies),
   (arr, family) => {
     let icons = IconFamilies[family];
